@@ -8,7 +8,7 @@
 #define SCREEN_H
 
 #include "types.h"
-#include "system.h"
+#include "sys.h"
 #include "string.h"
 
 // Screen size and depth constants
@@ -97,6 +97,35 @@ void printch(char c) {
     newLineCheck();
 }
 
+void printch_color(char c, uint8 color) {
+    string vidmem = (string) 0xb8000;
+    uint16 offset = (cursorY * sw + cursorX) * sd;
+
+    switch(c) {
+        case (0x08): // Backspace
+            if(cursorX > 0) {
+                cursorX--;
+                vidmem[offset - 2] = ' ';
+                vidmem[offset - 1] = color;
+            }
+            break;
+        case ('\r'): // Carriage Return
+            cursorX = 0;
+            break;
+        case ('\n'): // New Line
+            cursorX = 0;
+            cursorY++;
+            break;
+        default:
+            vidmem[offset] = c;
+            vidmem[offset + 1] = color;
+            cursorX++; 
+            break;
+    }
+    updateCursor(); // Update cursor position
+    newLineCheck(); // Check for new line
+}
+
 // Prints a string in default color
 void print(string ch) {
     uint16 i = 0;
@@ -106,26 +135,37 @@ void print(string ch) {
     }
 }
 
-// Function to print string in red
 void print_red(string ch) {
-    // Similar to print but with red color code
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for(; i < length; i++) {
+        printch_color(ch[i], 0x04); // Red color
+    }
 }
 
-// Function to print string in blue
 void print_blue(string ch) {
-    // Similar to print but with blue color code
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for(; i < length; i++) {
+        printch_color(ch[i], 0x01); // Blue color
+    }
 }
 
-// Function to print string in pink
 void print_pink(string ch) {
-    // Similar to print but with pink color code
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for(; i < length; i++) {
+        printch_color(ch[i], 0x05); // Pink (Light Magenta) color
+    }
 }
 
-// Function to print string in cyan
 void print_cyan(string ch) {
-    // Similar to print but with cyan color code
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for(; i < length; i++) {
+        printch_color(ch[i], 0x03); // Cyan color
+    }
 }
-
 // Add implementation for color printing functions here...
 
 #endif
