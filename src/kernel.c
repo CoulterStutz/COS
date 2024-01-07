@@ -2,6 +2,8 @@
 #include "include/kb.h"
 #include "include/string.h"
 #include "include/types.h"
+
+#include "include/math.h"
 #include "include/system.h"
 
 void badge() {
