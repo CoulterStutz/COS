@@ -9,7 +9,7 @@
 void badge() {
     print_red("C");
     print_cyan("O");
-    print_blue("S ");
+    print_green("S ");
     print_pink("1.0\n\n");
 }
 
@@ -32,7 +32,7 @@ void kmain() {
         if (strlength(ch) > 1 || (strlength(ch) == 1 && ch[0] != '\n')) {
 
             // Clear screen command
-            if (strEql(ch, "clear")) {
+            if (strEql(ch, "clear") || strEql(ch, "cls")) {
                 clearScreen();
                 badge();
             }
@@ -60,7 +60,7 @@ void kmain() {
             }
 
             // Exit Command
-            else if (strEql(ch, "exit"))
+            else if (strEql(ch, "exit") || strEql(ch,"halt"))
             {
                 clearScreen();
                 print("Shutting Down COS");
