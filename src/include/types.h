@@ -1,3 +1,9 @@
+// types.h
+// Written by IKnowYourBrain for free use with bare-metal C programming
+//      Youtube: https://www.youtube.com/@iknowbrain
+//      Github: https://github.com/iknowbrain
+//      Bitcoin: 13jStC1PWwZttLc8rhG6Xn1UeKE7rAP6hQ
+
 #ifndef TYPES_H
 #define TYPES_H
 
