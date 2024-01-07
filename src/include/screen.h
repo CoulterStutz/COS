@@ -1,5 +1,5 @@
 // screen.h
-// Written by IKnowYourBrain for free use with bare-metal C programming
+// Partially Written by IKnowYourBrain for free use with bare-metal C programming
 //      Youtube: https://www.youtube.com/@iknowbrain
 //      Github: https://github.com/iknowbrain
 //      Bitcoin: 13jStC1PWwZttLc8rhG6Xn1UeKE7rAP6hQ
@@ -166,6 +166,41 @@ void print_cyan(string ch) {
         printch_color(ch[i], 0x03); // Cyan color
     }
 }
-// Add implementation for color printing functions here...
+
+// Function to print string in green
+void print_green(string ch) {
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for (; i < length; i++) {
+        printch_color(ch[i], 0x02); // Green color
+    }
+}
+
+// Function to print string in gold
+void print_gold(string ch) {
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for (; i < length; i++) {
+        printch_color(ch[i], 0x06); // Gold color
+    }
+}
+
+// Function to print string in light blue
+void print_light_blue(string ch) {
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for (; i < length; i++) {
+        printch_color(ch[i], 0x09); // Light Blue color
+    }
+}
+
+// Function to print string in orange
+void print_orange(string ch) {
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for (; i < length; i++) {
+        printch_color(ch[i], 0x0C); // Orange color
+    }
+}
 
 #endif
