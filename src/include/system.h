@@ -10,5 +10,7 @@
 
 void delay(int count);
 void get_cpu_vendor(char *vendor);
+void halt();
+void reboot();
 
 #endif // SYSTEM_INFO_H

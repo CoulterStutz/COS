@@ -34,12 +34,16 @@ void kmain() {
             else if (strEql(ch, "info")) {
                 print("\n\nCOS 1.0 | Written by Coulter C. Stutz ");
                 print("\n   Bootloader written in 32 bit Assembly Language ");
+                
                 print("\n       Compiled with ");
                 print_blue("NASM ");
+
                 print("\n   Kernel written in ");
                 print_light_blue("C ");
+
                 print("\n       Compiled with ");
                 print_green("GCC ");
+
                 print("\n\nSome Include Libs forked from IKnowYourBrain ");
                 print_gold("\n   His Bitcoin Address: ");
                 
@@ -67,19 +71,20 @@ void kmain() {
                 print(ech);
             }
 
-            else if (strEql(ch, "reboot")) {
+            else if (strEql(ch, "sys reboot") || strEql(ch,"sysrbt"))
                 clearScreen();
                 print("Restarting COS...");
                 print_green("\n\nRestarting!");
+                reboot();
             }
 
             // Exit Command
-            else if (strEql(ch, "exit") || strEql(ch,"halt"))
+            else if (strEql(ch, "sys exit") || strEql(ch,"halt"))
             {
                 clearScreen();
                 print("Shutting Down COS");
                 print_red("\n\nHalting!");
-                __asm__("hlt");
+                halt();
             }
 
             // Command not recognized
