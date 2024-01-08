@@ -33,11 +33,19 @@ double div(double a, double b){
     return quotient;
 }
 
-double exp(double a, int exponent){
-    uint16 i = 1;
+double exp(double a, int exponent) {
+    if (exponent == 0) {
+        return 1;  // Any number to the power of 0 is 1
+    }
+
     double c = a;
-    for (; i < exponent; i++){
-        c = c * a;
+    if (exponent < 0) {
+        c = 1 / a;  // Handle negative exponent
+        exponent = -exponent;
+    }
+
+    for (uint16 i = 1; i < exponent; i++) {
+        c *= a;
     }
 
     return c;
