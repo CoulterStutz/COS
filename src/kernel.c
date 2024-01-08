@@ -64,20 +64,20 @@ void kmain() {
                 print("49zw4GkS6MAWffKoskZxba3WXRtLJPUpwbN5ufmHL2AgKzB7YjSWBoVPivtPmn1DVxLiSwdZc7QnkcFnvXUuWdK3RV1xhZZ ");
             }
             
-            /*else if (strEql(ch, "echnl")){
+            else if (strEql(ch, "echnl")){
                 print("\n");
                 string ech = readStr();
                 print("\n");
                 print(ech);
-            }*/
+            }
 
-            else if (strEql(ch, "sys reboot") || strEql(ch,"rel sys"))
+            /*else if (strEql(ch, "sys reboot") || strEql(ch,"rel sys"))
                 clearScreen();
                 print("Restarting COS...");
                 print_green("\n\nRestarting!");
                 reboot();
-            }
-
+            }*/
+            
             // Exit Command
             else if (strEql(ch, "sys exit") || strEql(ch,"halt"))
             {
