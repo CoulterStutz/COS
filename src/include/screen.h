@@ -203,4 +203,13 @@ void print_orange(string ch) {
     }
 }
 
+void print_purple(string ch) {
+    uint16 i = 0;
+    uint8 length = strlength(ch);
+    for (; i < length; i++) {
+        printch_color(ch[i], 0x05); // Purple color
+    }
+}
+
+
 #endif
