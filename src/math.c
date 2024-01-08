@@ -4,33 +4,37 @@
 #include "include/math.h"
 #include "include/types.h"
 
-double add(double a, double b) {
-    double sum;
-    sum = a + b;
-    return sum;
+int add(int a, int b) {     // Integer Add
+    int c;
+    c = a + b;
+
+    return c;
 }
 
-double sub(double a, double b) {
-    double difference;
-    difference = a - b;
-    return difference;
+int sub(int a, int b) {     // Integer Sub
+    int c;
+    c = a - b;
+
+    return c;
 }
 
-double mul(double a, double b) {
-    double product;
-    product = a * b;
-    return product;
+double mul(double a, double b) {   // Multiply
+    double c;   // Product
+    c = a * b;
+
+    return c;
 }
 
-double div(double a, double b){
-    double quotient;
+double div(double a, double b){    // Double 
+    double c;   // Quotient
     if (b != 0.0) {
-        quotient = a / b;
+        c = a / b;
     } else {
         // Handle division by zero if necessary, for now, returning 0
-        quotient = 0.0;
+        c = 0.0;
     }
-    return quotient;
+
+    return c;
 }
 
 double exp(double a, int exponent) {
@@ -49,4 +53,18 @@ double exp(double a, int exponent) {
     }
 
     return c;
+}
+
+double dadd(double a, double b) {   // Double Add
+    double sum;
+    sum = a + b;
+
+    return sum;
+}
+
+double dsub(double a, double b) {   // Double Sub
+    double difference;
+    difference = a - b;
+
+    return difference;
 }

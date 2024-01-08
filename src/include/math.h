@@ -1,19 +1,15 @@
 #ifndef MATH_H
 #define MATH_H
 
-// Function prototype for addition
-double add(double a, double b);
+// Integer (Whole Number) Funcs
+int add(int a, int b);  // Add (Integer Only)
+int sub(int a, int b);  // Sub (Integer Only)
 
-// Function prototype for subtraction
-double sub(double a, double b);
-
-// Function prototype for multiplication
-double mul(double a, double b);
-
-// Function prototype for division
-double div(double a, double b);
-
-// Exponent Function
-double exp(double a, int exponent);
+// Double Funcs
+double dadd(double a, double b);    // Double Add
+double dsub(double a, double b);    // Double Sub
+double mul(double a, double b);     // Multiply
+double div(double a, double b);     // Divide
+double exp(double a, int exponent); // Exponent
 
 #endif // MATH_H
