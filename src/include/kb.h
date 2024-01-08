@@ -228,16 +228,16 @@ string readStr()
                 buffstr[i] = (char)44;
                 i++;
                 break;
-     /* case 42:                                 Left shift 
+        case 42:
                 printch('q');
                 buffstr[i] = 'q';
                 i++;
                 break;
-        case 43:                                 \ (< for somekeyboards)   
+        case 43:
                 printch((char)92);
                 buffstr[i] = 'q';
                 i++;
-                break;*/
+                break;
         case 44:
                 printch('z');
                 buffstr[i] = 'z';
