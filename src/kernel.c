@@ -8,10 +8,10 @@
 
 void kmain() {
     // Clear the screen and print the welcome message
-    clearScreen();
-    badge();
+    clearScreen();  // Clear Console
+    badge();    // Show COS Text
 
-    delay(100000000);
+    delay(100000000);   // Delay before entering loop
 
     // Main loop
     while (1) {
