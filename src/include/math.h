@@ -13,4 +13,7 @@ double mul(double a, double b);
 // Function prototype for division
 double div(double a, double b);
 
+// Exponent Function
+double exp(double a, int exponent);
+
 #endif // MATH_H

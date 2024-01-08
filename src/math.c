@@ -2,6 +2,7 @@
 // Written by Coulter C. Stutz
 
 #include "include/math.h"
+#include "include/types.h"
 
 double add(double a, double b) {
     double sum;
@@ -30,4 +31,14 @@ double div(double a, double b){
         quotient = 0.0;
     }
     return quotient;
+}
+
+double exp(double a, int exponent){
+    uint16 i = 1;
+    double c = a;
+    for (; i < exponent; i++){
+        c = c * a;
+    }
+
+    return c;
 }
