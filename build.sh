@@ -14,6 +14,10 @@ gcc -m32 -ffreestanding -c src/math.c -o build/math.o
 gcc -m32 -T src/linker.ld -o bin/kernel.bin -ffreestanding -O2 -nostdlib -lgcc build/boot.o build/kernel.o build/system.o build/math.o
 cp bin/kernel.bin bin/cos.img
 
+echo Building ISO
+dd if=bin/cos.img of=bin/cos.img bs=4M
+
+
 if [ "$RUNQEMU" = true ]; then
     qemu-system-i386 -kernel bin/kernel.bin
 fi
