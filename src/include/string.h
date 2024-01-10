@@ -1,37 +1,23 @@
-// string.h
-// Written by IKnowYourBrain for free use with bare-metal C programming
-//      Youtube: https://www.youtube.com/@iknowbrain
-//      Github: https://github.com/iknowbrain
-//      Bitcoin: 13jStC1PWwZttLc8rhG6Xn1UeKE7rAP6hQ
-
 #ifndef STRING_H
 #define STRING_H
 
-#include "types.h"
-uint16 strlength(string ch)
-{
-        uint16 i = 1;
-        while(ch[i++]);  
-        return --i;
-}
+#include "types.h"  // Assuming types.h defines uint16, etc.
 
-/* Added in episode 3*/ /*This function compares two strings and returns true (1) if they are equal or false (0) if they are not equal */
+typedef char* string;  // Define string as a pointer to char
 
-uint8 strEql(string ch1,string ch2)                     
-{
-        uint8 result = 1;
-        uint8 size = strlength(ch1);
-        if(size != strlength(ch2)) result =0;
-        else 
-        {
-        uint8 i = 0;
-        for(i;i<=size;i++)
-        {
-                if(ch1[i] != ch2[i]) result = 0;
-        }
-        }
-        return result;
-}
+// Function prototype to calculate the length of a string
+uint16 strlength(string ch);
 
+// Function prototype to compare two strings (returns 1 if equal, 0 otherwise)
+uint8 strEql(string ch1, string ch2);
 
-#endif
+// Function prototype to copy a string from src to dest
+void strcpy(string dest, string src);
+
+// Function prototype to concatenate two strings
+void strcat(string dest, string src);
+
+// Function prototype to compare two strings (returns 0 if equal, <0 if ch1 < ch2, >0 if ch1 > ch2)
+int strcmp(string ch1, string ch2);
+
+#endif // STRING_H
