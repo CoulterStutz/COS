@@ -13,14 +13,6 @@ void halt(){
     asm("hlt");
 }
 
-void reboot() {
-    // Pulse the CPU's reset line using the keyboard controller
-    uint8_t good = 0x02;
-    while (good & 0x02)
-        good = inportb(0x64);
-    outportb(0x64, 0xFE);
-}
-
 // System Information Functions
 void get_cpu_vendor(char *vendor) {
     return; // coming soon
