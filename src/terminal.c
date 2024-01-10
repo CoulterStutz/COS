@@ -15,5 +15,11 @@ void badge() {
     print_red("C");
     print_cyan("O");
     print_green("S ");
-    print_pink("1.0\n\n");
+    print_pink(sysvrs);
+    print("\n\n");
+}
+
+void badge_min(){
+    print("COS ");
+    print(sysvrs);
 }

@@ -7,6 +7,8 @@
 
 // System Interaction Functions
 
+string sysvrs = "1.0";
+
 void halt(){
     asm("hlt");
 }

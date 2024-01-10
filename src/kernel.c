@@ -32,7 +32,9 @@ void kmain() {
 
             // Display system info command
             else if (strEql(ch, "info")) {
-                print("\n\nCOS 1.0 | Written by Coulter C. Stutz ");
+                print("\n\n");
+                badge_min();
+                print("Written by Coulter C. Stutz ");
                 print("\n   Bootloader written in 32 bit Assembly Language ");
                 
                 print("\n       Compiled with ");
@@ -69,6 +71,14 @@ void kmain() {
                 string ech = readStr();
                 print("\n");
                 print(ech);
+            }
+
+            else if (strEql(ch, "?") || strEql(ch, "help")) {
+                print_cyan("\n\nCommands");
+                print("\n   ?/help | Provides a list of commands and their function ");
+                print("\n   info   | Provides system information ");
+                print("\n   exit   | Halts the cpu, shutting down the system ");
+                print("\n   clear  | Clears console ");
             }
 
             /*else if (strEql(ch, "sys reboot") || strEql(ch,"rel sys"))
