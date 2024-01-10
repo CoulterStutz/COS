@@ -228,7 +228,7 @@ string readStr()
                 buffstr[i] = (char)44;
                 i++;
                 break;
-     /* case 42:                                 Left shift 
+        case 42: 
                 printch('q');
                 buffstr[i] = 'q';
                 i++;
@@ -298,11 +298,11 @@ string readStr()
                 buffstr[i] = '/';
                 i++;
                 break;            
-      /*case 56:
-                printch(' ');           Right shift
+        case 56:
+                printch(' ');
                 buffstr[i] = ' ';
                 i++;
-                break;*/           
+                break;           
         case 57:
                 printch(' ');
                 buffstr[i] = ' ';
