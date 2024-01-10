@@ -19,18 +19,6 @@ typedef unsigned int uint32;
 typedef signed long long int64;
 typedef unsigned long long uint64;
 
-typedef signed char uint8_t;
-typedef unsigned char uint8_t;
-
-typedef signed char uint16_t;
-typedef unsigned char uint16_t;
-
-typedef signed char uint32_t;
-typedef unsigned char uint32_t;
-
-typedef signed char uint64_t;
-typedef unsigned char uint64_t;
-
 typedef char* string; 
 
 #endif
