@@ -5,6 +5,20 @@
 #include "include/math.h"
 #include "include/system.h"
 
+void badge() {
+    print_red("C");
+    print_cyan("O");
+    print_green("S ");
+    print_pink(sysvrs);
+    print("\n\n");
+}
+
+void badge_min(){
+    print("COS ");
+    print(sysvrs);
+}
+
+
 void kmain() {
     // Clear the screen and print the welcome message
     clearScreen();  // Clear Console

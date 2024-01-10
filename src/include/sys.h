@@ -4,19 +4,18 @@
 //      Github: https://github.com/iknowbrain
 //      Bitcoin: 13jStC1PWwZttLc8rhG6Xn1UeKE7rAP6hQ
 
-#ifndef SYSTEM_H
-#define SYSTEM_H
-#include "types.h"
-uint8 inportb (uint16 _port)
-{
-    	uint8 rv;
-    	__asm__ __volatile__ ("inb %1, %0" : "=a" (rv) : "dN" (_port));
-    	return rv;
-}
+#ifndef SYS_H
+#define SYS_H
 
-void outportb (uint16 _port, uint8 _data)
-{
-	__asm__ __volatile__ ("outb %1, %0" : : "dN" (_port), "a" (_data));
-}
+#include "types.h"  // Assuming this includes type definitions like uint8_t, uint16_t, etc.
 
-#endif
+// Function prototype for reading a byte from an I/O port
+uint8_t inportb(uint16_t port);
+
+// Function prototype for writing a byte to an I/O port
+void outportb(uint16_t port, uint8_t data);
+
+// Additional system-level function prototypes
+// ...
+
+#endif // SYS_H

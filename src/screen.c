@@ -1,5 +1,5 @@
-#include "screen.h"	
-#include "types.h"  // Assuming this contains uint8_t, etc.	
+#include "include/screen.h"	
+#include "include/types.h"  // Assuming this contains uint8_t, etc.	
 
 // VGA's memory starts at 0xB8000	
 #define VIDEO_ADDRESS 0xB8000	
