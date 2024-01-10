@@ -11,6 +11,8 @@
 #include "include/math.h"
 #include "include/system.h"
 
+string sysvrs = "1.0";
+
 void badge() {
     print_red("C");
     print_cyan("O");
