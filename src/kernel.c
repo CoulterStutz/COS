@@ -48,7 +48,7 @@ void kmain() {
             // Display system info command
             else if (strEql(ch, "info")) {
                 print("\n\n");
-                badge_min();
+                badge();
                 print("Written by Coulter C. Stutz ");
                 print("\n   Bootloader written in 32 bit Assembly Language ");
                 
