@@ -37,23 +37,45 @@ void kmain() {
                 badge();
             }
 
+            else if (strEql(ch, "?") || strEql(ch, "help")) {
+                print_cyan("\n\nCommands");
+                print("\n   ?/help | Provides a list of commands and their function ");
+                print("\n   info   | Provides system information ");
+                print("\n   exit   | Halts the cpu, shutting down the system ");
+                print("\n   clear  | Clears console ");
+            }
+
             // Display system info command
             else if (strEql(ch, "info")) {
-                print("\n\nCOS 1.0 | Written by Coulter C. Stutz ");
+                print("\n\n");
+                badge_min();
+                print("Written by Coulter C. Stutz ");
                 print("\n   Bootloader written in 32 bit Assembly Language ");
+                
                 print("\n       Compiled with ");
                 print_blue("NASM ");
+
                 print("\n   Kernel written in ");
                 print_light_blue("C ");
+
                 print("\n       Compiled with ");
                 print_green("GCC ");
+
                 print("\n\nSome Include Libs forked from IKnowYourBrain ");
                 print_gold("\n   His Bitcoin Address: ");
+                
                 print("1KEJNtrJAU3VEYyiBtELKra1Tq3XM5Ligk ");
                 print("\n\n\n   Buy Me Virtual Pizza! ");
                 print_gold("\n       Bitcoin: ");
                 print("13jStC1PWwZttLc8rhG6Xn1UeKE7rAP6hQ ");
-                print_light_blue("\n       ETH/BSC/MATIC: ");
+                
+                print_light_blue("\n       ETH");
+                print("/");
+                print_gold("BSC");
+                print("/");
+                print_purple("MATIC");
+                print(":");
+                
                 print("0xa693190103733280E23055BE70C838d9b6708b9a ");
                 print_orange("\n       Monero: ");
                 print("49zw4GkS6MAWffKoskZxba3WXRtLJPUpwbN5ufmHL2AgKzB7YjSWBoVPivtPmn1DVxLiSwdZc7QnkcFnvXUuWdK3RV1xhZZ ");
