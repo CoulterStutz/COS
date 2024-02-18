@@ -233,7 +233,7 @@ string readStr()
                 buffstr[i] = 'q';
                 i++;
                 break;
-        case 43:                                 \ (< for somekeyboards)   
+        case 43:
                 printch((char)92);
                 buffstr[i] = 'q';
                 i++;
